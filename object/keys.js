@@ -1,6 +1,4 @@
-// O Object.keys() método estático retorna uma matriz de nomes de propriedades enumeráveis ​​com chave de string do próprio objeto.
-
-// Retorna um Array de string do próprio objeto
+// O método estático Object.keys() retorna um array contendo os nomes das propriedades enumeráveis de um objeto, cujas chaves são strings.
 
 const object1 = {
     a: 'somestring',
