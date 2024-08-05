@@ -12,12 +12,12 @@ const object1 = {
   const object2 = {
     d: 'neto',
     e: 312,
-    false:{
+    true:{
       hello:[1, 2, 3, "oi"]
     }
   }
 
-  console.log(Object.keys(object2)); // Expected output: Array ["d", "e", "false"]
+  console.log(Object.keys(object2)); // Expected output: Array ["d", "e", "true"]
 
   const object3 = {
     1: 'neto',
