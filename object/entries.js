@@ -12,8 +12,8 @@ Object.entries(obj)
 // Descrição
 // Object.entries() retorna um array cujos elementos são também arrays correspondentes aos pares de propriedades [key, value] enumeráveis encontrados diretamente sobre o objeto. A ordem das propriedades é a mesma que seria se fossem iteradas as propriedades do objeto manualmente.
 
-var obj = { foo: "bar", baz: 42 };
-console.log(Object.entries(obj)); // [ ['foo', 'bar'], ['baz', 42] ]
+var name1 = { name: "mansueto", age: 26 };
+console.log(Object.entries(name1)); // [ ['name', 'mansueto'], ['age', 26] ]
 
 // objeto array-like
 var obj = { 0: "a", 1: "b", 2: "c" };

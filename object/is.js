@@ -9,3 +9,5 @@ console.log(Object.is(-0, 0)); // Expected output: false
 
 const obj = {};
 console.log(Object.is(obj, {})); // Expected output: false
+
+// O método Object.is() sempre irá retornar um booleano indicando se os dois valores fornecidos são o mesmo valor. Ele é semelhante ao operador de igualdade estrita (===), mas difere em alguns casos, como NaN e -0.

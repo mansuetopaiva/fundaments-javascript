@@ -1,21 +1,21 @@
-// O Object.assign() método estático copia todas as propriedades próprias enumeráveis​​de um ou mais objetos de origem para um objeto de destino. Ele retorna o objeto de destino modificado
+// O Object.assign() método estático copia todas as propriedades próprias enumeráveis​​ de um ou mais objetos de origem para um objeto de destino. Ele retorna o objeto de destino modificado
 
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
+const target1 = { a: 1, b: 2, c: 10};
+const source = { b: 4, d: 55, e: 15 };
 
-const returnedTarget = Object.assign(target, source);
+const returnedTarget = Object.assign(target1, source);
 
-console.log(target);
-// Expected output: Object { a: 1, b: 4, c: 5 }
+console.log(target1);
+// Expected output: Object { a: 1, b: 4, c: 10, d: 55, e: 15 }
 
-console.log(returnedTarget === target);
+console.log(returnedTarget === target1);
 // Expected output: true
 
 // Clonando um objeto
 
-var obj = { a: 1, b: 321 };
+var obj = { a: 1, b: 321, c: `neto` };
 var copy = Object.assign({}, obj);
-console.log(copy); // { a: 1, b: 321 }
+console.log(copy); // { a: 1, b: 321, c: "neto" }
 
 // Mesclando objetos
 
@@ -69,7 +69,7 @@ console.log(obj); // { "0": "1", "1": "2", "2": "3" }
 
 // Exceções irão interromper a tarefa de cópia em execução
 
-var target = Object.defineProperty({}, "foo", {
+let target = Object.defineProperty({}, "foo", {
     value: 1,
     writeable: false,
   }); // target.foo is a read-only property

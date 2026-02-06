@@ -24,7 +24,10 @@ const object1 = {
     3: 312,
     5:{
       hello:[1, 2, 3, "oi"]
+    },
+    false: {
+      bye:[4, 2, 3, "oi"]
     }
   }
 
-  console.log(Object.keys(object3)); // Expected output: Array ['1', '3', '5']
+  console.log(Object.keys(object3)); // Expected output: Array ['1', '3', '5', 'false']

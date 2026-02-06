@@ -10,35 +10,27 @@
 // Nota
 // o método hasOwnProperty retorna true mesmo se o valor da propridade em questão é null ou undefined
 
-o = new Object();
-o.propUm = null;
-o.hasOwnProperty('propUm'); // retorna true
-o.propDois = undefined;
-o.hasOwnProperty('propDois'); // retorna true
+obj = new Object();
+obj.propUm = null;
+obj.hasOwnProperty('propUm'); // retorna true
+obj.propDois = undefined;
+obj.hasOwnProperty('propDois'); // retorna true
 
 // O seguinte exemplo determina se o objeto o possui uma propriedade com o nome prop:
 
-o = new Object();
-o.hasOwnProperty('prop'); // retorna false
-o.prop = 'existe';
-o.hasOwnProperty('prop'); // retorna true
+obj1 = new Object();
+obj1.hasOwnProperty('prop'); // retorna false
+obj1.prop = 'existe';
+obj1.hasOwnProperty('prop'); // retorna true
 
 // Propriedades Diretas vs Propriedades Herdadas
 // O seguinte exemplo diferencia entre propriedade diretas e propriedade herdadas da cadeia prototípica:
 
-o = new Object();
-o.prop = "existe";
-o.hasOwnProperty("prop"); // Retorna true
-o.hasOwnProperty("toString"); // Retorna false
-o.hasOwnProperty("hasOwnProperty"); // Retorna false
-
-// O seguinte exemplo diferencia entre propriedade diretas e propriedade herdadas da cadeia prototípica:
-
-o = new Object();
-o.prop = "existe";
-o.hasOwnProperty("prop"); // Retorna true
-o.hasOwnProperty("toString"); // Retorna false
-o.hasOwnProperty("hasOwnProperty"); // Retorna false
+obj2 = new Object();
+obj2.prop = "existe";
+obj2.hasOwnProperty("prop"); // Retorna true
+obj2.hasOwnProperty("toString"); // Retorna false
+obj2.hasOwnProperty("hasOwnProperty"); // Retorna false
 
 // O seguinte exemplo mostra como percorrer as propriedade de um objeto sem executar as propriedade herdadas.
 
@@ -73,3 +65,4 @@ var buz = {
   // Também é possível usar hasOwnProperty do objeto
   Object.prototype.hasOwnProperty.call(foo, "bar"); // true
   
+  // RESUMO. O metodo hasOwnProperty() sempre retorna um booleano(true or false) indicando se o objeto possui a propriedade especificada como uma propriedade definida no próprio objeto em questão (ao contrário de uma propriedade herdada). O método é útil para diferenciar entre propriedades diretas e propriedades herdadas da cadeia prototípica.
