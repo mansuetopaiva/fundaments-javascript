@@ -2,9 +2,8 @@
   "name": "fundaments-javascript",
   "lockfileVersion": 3,
   "requires": true,
-  "packages": {}
-}
-dependencies": {
+  "packages": {},
+  "dependencies": {
     "@babel/runtime": "^7.28.6",
     "@sendgrid/mail": "^8.1.6",
     "@sentry/browser": "^10.38.0",
@@ -32,4 +31,5 @@ dependencies": {
     "react-ga": "^3.0.0",
     "react-google-recaptcha": "^2.1.0",
     "sass": "^1.26.8"
-  },
+  }
+}

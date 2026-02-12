@@ -7,14 +7,14 @@ import express from 'express'
 import helmet from 'helmet'
 import methodOverride from 'method-override'
 import morgan from 'morgan'
-import next from 'next'
+import next from 'next' // linha 1 a 10 importa pacotes de terceiros, que são instalados via npm ou yarn. (vem do package.json)
 import api from './utils/api' 
 import emailRegex from './utils/email-regex'
 import monitoring from './utils/monitoring/server'
 import { isDevelopment, variables } from './utils/environment'
-import mailer from './utils/mailer'
+import mailer from './utils/mailer' // linha 11 a 15 importa pacotes de uma pasta local do projeto
 
-const port = parseInt(variables.PORT || '', 10) || 3000
+const port = parseInt(variables.PORT || '3000', 10)
 const host = variables.HOST || (variables.DYNO ? '0.0.0.0' : '127.0.0.1')
 const server = express()
 if (isDevelopment) {
@@ -40,7 +40,7 @@ app
       .use(helmet())
       .use(methodOverride())
       .use(morgan('dev'))
-      .all('/_next/*', (req, res) => handle(req, res))
+      .all('/_next/*', (handle))
       .post('/subscribe/:email', api.subscribe)
       .post('/submit/:email/:origin', api.submit)
       .get('/confirm/:email/:origin/:body', (req, res) =>
