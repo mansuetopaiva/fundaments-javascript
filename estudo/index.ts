@@ -15,6 +15,8 @@ import { isDevelopment, variables } from './utils/environment'
 import mailer from './utils/mailer' // linha 11 a 15 importa pacotes de uma pasta local do projeto
 
 const port = parseInt(variables.PORT || '3000', 10)
+// const port vai receber o valor de variables.PORT, se existir. Se não existir, vai receber '3000' (string). Depois, parseInt converte essa string para número. 
+
 const host = variables.HOST || (variables.DYNO ? '0.0.0.0' : '127.0.0.1')
 const server = express()
 if (isDevelopment) {
