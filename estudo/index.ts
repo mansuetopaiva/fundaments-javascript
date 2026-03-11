@@ -15,15 +15,20 @@ import { isDevelopment, variables } from './utils/environment'
 import mailer from './utils/mailer' // linha 11 a 15 importa pacotes de uma pasta local do projeto
 
 const port = parseInt(variables.PORT || '3000', 10)
-// const port vai receber o valor de variables.PORT, se existir. Se não existir, vai receber '3000'. Depois, parseInt converte essa string para número. 
+// const port vai receber o valor de variables.PORT, se existir. Se não existir, vai receber '3000'. Depois, parseInt converte essa string para número, porque o parseInt retornar um number. 
 
 const host = variables.HOST || (variables.DYNO ? '0.0.0.0' : '127.0.0.1')
 // const host vai receber o valor de variables.HOST, se existir. Se não existir, vai verificar se DYNO existe. Se DYNO existir, host será '0.0.0.0'. Caso contrário, host será '127.0.0.1'.
+
 const server = express()
+// const server vai retornar o resultado da função express(), que é uma função do framework Express.
+console.log(typeof express())
+
 if (isDevelopment) {
   variables.NEXT_DISABLE_TURBOPACK = '1'
 }
-// Se estiver em desenvolvimento, desabilita o Turbopack, que é um empacotador de código. Isso pode ser útil para evitar problemas de compatibilidade durante o desenvolvimento.
+// Se estiver em desenvolvimento, desabilita o Turbopack.
+
 const app = next({ dev: isDevelopment })
 // const esta vai retornar o resultado de next({ dev: isDevelopment }). O next é uma função que recebe um objeto. Nesse caso, estamos passando uma chamada propriedade dev.
 
@@ -37,12 +42,12 @@ app
   .prepare()
   .then(() => {
     const handle = app.getRequestHandler()
-    // app é o resultado da chamada next({ dev: isDevelopment }). Ele tem um método chamado prepare, que é uma função assíncrona.
-    //  E then é usado para lidar com a promessa retornada por prepare.
-    //  Dentro do then, estamos definindo uma constante handle, que recebe o resultado de app.getRequestHandler(). Que é uma função.
-    //  O getRequestHandler é um método do Next.js que retorna uma função para lidar com as requisições HTTP.
+    /*   app é o resultado da chamada next({ dev: isDevelopment }). Ele tem um método chamado prepare, que é uma função assíncrona.
+      E then é usado para lidar com a promessa retornada por prepare.
+      Dentro do then, estamos definindo uma constante handle, que recebe o resultado de app.getRequestHandler(). Que é uma função.
+      O getRequestHandler é um método do Next.js que retorna uma função para lidar com as requisições HTTP. */
       .use(bodyParser.json())
-      // .use é uma função do Express. Ela esta chamando bodyParser.json(), que também é uma função.
+      // .use é uma função do Express. Ela esta chamando bodyParser.json(), que também é uma função. .use recebe o retorno da função bodyParser.json()
       .use(bodyParser.urlencoded({ extended: true }))
       // .use é uma função do Express. Ela esta chamando bodyParser.urlencoded(), que também é uma função. O argumento { extended: true } é um objeto.
       .use(compression())
@@ -86,7 +91,7 @@ app
     // monitoring.errorHandler é uma função. Ela recebe como argumento o (server).
 
     server.listen(port, host, () =>
-      console.log(⁠ > Ready on http://${host}:${port} ⁠),
+      console.log(`> Ready on http://${host}:${port}`)
     )
   })
   // .listen é uma função do Express. Ela recebe como argumentos port, host e uma função.
