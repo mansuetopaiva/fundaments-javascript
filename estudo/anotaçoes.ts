@@ -47,21 +47,64 @@ const a = {}
 const b = '{}'
 const c = []
 const d = [0,3,4,5,6]
-const e = ['caju','banana']
-const f = [{}, {a:'caju'},{b:'banana'},{c:'laranja'}]
+const e = ['caju','limao']
+const f = [{}, {a:'caju'},{b:'limao'},{c:'laranja'}]
 const g = function () {return {}}
 const h = function () {return ''}
 const i = function() {return 0}
-const j = function() {return 0}()
+const j = function() {return [0]}()
 const l = () => ''
 const m = (() => {return {}})
 const n = (() => {return {}})()
-const o = () => []          
+const o = () => []
 const p = () => undefined
-const q = [() => ({}),function(){return undefined}]
+const q = [() => ({}),function(){return undefined}()]
 
 console.log(g());
 console.log(typeof f[2].b)
-console.log(typeof n)
-console.log(typeof q[1]())
+console.log(typeof m) 
+console.log(typeof q[1])
 console.log(typeof h) 
+console.log
+
+}
+export default { 
+  banana: f[2].b,
+};
+
+
+// Async/Await Example
+
+console.log('banana')
+(async () => {
+  try {
+  const apiKey = await fetch('https://api.example.com/get-api-key') // função HTTP (GET)
+    console.log('pera')
+  const server = new Express()
+  server.use({ apiKey: apiKey }) 
+  server.start()
+  } catch (error) {
+    console.error('caju')
+  }
+  console.log('maca')
+})();
+  console.log('mamao')
+
+// Promise Example
+console.log('limao')
+fetch('https://api.example.com/get-api-key') // função HTTP (GET)
+  .then((apiKey) => {
+    console.log('maca')
+    const server = new Express()
+    server.use({ apiKey: apiKey }) 
+    server.start()
+    console.log('pera')
+  })
+  .catch((error) => {
+    console.error('caju', error)
+  })
+  .finally(() => {
+    console.log('uva')
+    console.info('manga')
+  })
+console.log('mamao')
