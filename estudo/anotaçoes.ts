@@ -38,7 +38,7 @@ const port = parseInt(variables.PORT || '', 10) || '3000';
 
 
 console.log(typeof.get(emailRegex, (req, res) => api.verification(req, res, app)))
-// typeof.get → retorna o tipo do valor
+// typeof  → retorna o tipo do valor
 // emailRegex → expressão regular para validar email
 // (req, res) => api.verification(req, res, app) → função de callback para lidar com a requisição e resposta
 
@@ -58,7 +58,8 @@ const m = (() => {return {}})
 const n = (() => {return {}})()
 const o = () => []
 const p = () => undefined
-const q = [() => ({}),function(){return undefined}()]
+const q = [() => ({}), function(){return undefined}()]
+
 
 console.log(g());
 console.log(typeof f[2].b)
@@ -77,11 +78,14 @@ export default {
 
 console.log('banana')
 (async () => {
+    console.log('tangrina')
   try {
-  const apiKey = await fetch('https://api.example.com/get-api-key') // função HTTP (GET)
     console.log('pera')
+  const apiKey = await fetch('https://api.example.com/get-api-key') // função HTTP (GET)
+    console.log('coco')
   const server = new Express()
   server.use({ apiKey: apiKey }) 
+  console.log('limao')
   server.start()
   } catch (error) {
     console.error('caju')
@@ -96,6 +100,7 @@ fetch('https://api.example.com/get-api-key') // função HTTP (GET)
   .then((apiKey) => {
     console.log('maca')
     const server = new Express()
+    console.log('coco')
     server.use({ apiKey: apiKey }) 
     server.start()
     console.log('pera')
