@@ -1,0 +1,1 @@
+como e onde é utilizado a função de callback no javascript?
