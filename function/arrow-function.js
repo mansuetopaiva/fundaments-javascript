@@ -74,7 +74,7 @@ código mais limpo
 
 é mais curta
 
-usa =>
+usa " => " 
 
 pode omitir return
 

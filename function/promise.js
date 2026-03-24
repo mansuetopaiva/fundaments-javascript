@@ -32,7 +32,7 @@ const promessa = new Promise((resolve, reject) => {
   const sucesso = true;
 
   if (sucesso) {
-    resolve("Deu tudo certo!");
+    resolve("Deu tudo certto!")
   } else {
     reject("Deu erro!");
   }
@@ -114,17 +114,46 @@ fetch('https://api.example.com/get-api-key') // função HTTP (GET)
   })
 console.log('mamao') // segundo a ser chamado
 
+// Promise usando Promise.all
+// Executa várias Promises ao mesmo tempo.
+const p1 = Promise.resolve(10);
+const p2 = Promise.resolve(20);
+const p3 = Promise.resolve(30);
+
+Promise.all([p1, p2, p3])
+  .then(valores => {
+    console.log(valores); // [10, 20, 30]
+  });
+// Isso é muito usado quando buscamos vários dados ao mesmo tempo.
+
+// Promise esperando várias operações
+function dobrar(numero) {
+  return new Promise(resolve => {
+    resolve(numero * 2);
+  });
+}
+
+dobrar(5)
+  .then(n => dobrar(n))
+  .then(n => dobrar(n))
+  .then(resultado => {
+    console.log(resultado); // 40 (5 → 10 → 20 → 40)
+  });
+
+
 /* Resumo
 
 Promise é um objeto para lidar com operações assíncronas.
 
-Partes principais:
+ Partes principais:
 
 parte	função
 Promise	                    cria promessa
 resolve	                    sucesso
 reject	                    erro
-then	                      executa se sucesso
-catch	                      executa se erro
-finally	                    executa sempre
+.then	                      executa se sucesso
+.catch	                    executa se erro
+.finally	                  executa sempre
+.all()	                    espera várias Promises
 */
+
