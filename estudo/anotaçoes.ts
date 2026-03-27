@@ -48,7 +48,7 @@ const b = '{}'
 const c = []
 const d = [0,3,4,5,6]
 const e = ['caju','limao']
-const f = [{}, {a:'caju'},{b:'limao'},{c:'laranja'}]
+const f = [{}, {a:'caju'},{b:[2, 0, 10]},{c:'laranja'}]
 const g = function () {return {}}
 const h = function () {return ''}
 const i = function() {return 0}
@@ -62,16 +62,11 @@ const q = [() => ({}), function(){return undefined}()]
 
 
 console.log(g());
-console.log(typeof f[2].b)
+console.log(f[2].b[2])
 console.log(typeof m) 
 console.log(typeof q[1])
 console.log(typeof h) 
 console.log
-
-}
-export default { 
-  banana: f[2].b,
-};
 
 
 // Async/Await Example

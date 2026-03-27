@@ -1,6 +1,6 @@
 /* O que é callback?
 
-Um callback é uma função passada como argumento para outra função, que será executada depois.
+Um callback é uma função passada como parâmetro para outra função, que será executada depois.
 
 👉 Em outras palavras:
 “executa isso quando terminar”
@@ -56,7 +56,7 @@ const pares = [1, 2, 3, 4].filter(n => n % 2 === 0);
 pedidos.forEach(pedido => {
   console.log(pedido.cliente);
 });
-// pedido => {} é o callback
+// pedido => {console.log(pedido.cliente)} é o callback
 
 // Callback assíncrona (estilo antigo)
 function buscarDados(callback) {
@@ -83,11 +83,11 @@ buscar1(() => {
 ✔ Por isso usamos:
 
 Promises
-async/await */
+async/await
 
-/* Resumo simples
+  Resumo simples
 
-✔ Callback = função passada como argumento
+✔ Callback = função passada como parâmetro
 ✔ Executa depois
 ✔ Muito usada em:
 

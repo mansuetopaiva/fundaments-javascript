@@ -21,9 +21,9 @@ array.reduce((acumulador, elemento) => {
 
 /*
 Parâmetros:
-acumulador → guarda o resultado parcial
-elemento → item atual
-valorInicial → valor inicial do acumulador
+acumulador →        guarda o resultado parcial
+elemento →          item atual
+valorInicial →      valor inicial do acumulador
 */ 
 
 // Exemplo prático: somar números
