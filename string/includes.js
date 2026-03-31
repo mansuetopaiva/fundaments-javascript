@@ -1,5 +1,5 @@
 // O método .includes() é usado para verificar se uma string contém um determinado trecho.
-string.includes(valor)
+string.includes(value)
 
 // Exemplo:
 const frase = "JavaScript é muito bom";

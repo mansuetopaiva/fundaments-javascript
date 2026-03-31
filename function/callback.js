@@ -1,6 +1,6 @@
 /* O que é callback?
 
-Um callback é uma função passada como parâmetro para outra função, que será executada depois.
+Um callback é uma função passada como argumento para outra função, que será executada depois.
 
 👉 Em outras palavras:
 “executa isso quando terminar”
@@ -87,7 +87,7 @@ async/await
 
   Resumo simples
 
-✔ Callback = função passada como parâmetro
+✔ Callback = função passada como argumento
 ✔ Executa depois
 ✔ Muito usada em:
 

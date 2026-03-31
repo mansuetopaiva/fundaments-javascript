@@ -40,6 +40,20 @@ console.log(resultado); // undefined
 
 // .forEach() não retorna nada (undefined)
 
+const carrinho = [
+  { produto: "Notebook", preco: 3000 },
+  { produto: "Mouse", preco: 100 },
+  { produto: "Teclado", preco: 200 }
+];
+
+let total = 0;
+
+carrinho.forEach(item => {
+  total += item.preco;
+});
+
+console.log(total); // 3300
+
 /*
  Quando usar?
 

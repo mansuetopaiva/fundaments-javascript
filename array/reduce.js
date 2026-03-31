@@ -73,8 +73,8 @@ Comparação com outros métodos
 Método	                O que faz
 .forEach()	            percorre e executa
 .map()	                transforma array
-.filter()	            filtra
-.reduce()	            transforma em um único valor
+.filter()	              filtra
+.reduce()	              transforma em um único valor
 
 
     Regra de ouro
