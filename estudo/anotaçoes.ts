@@ -108,3 +108,4 @@ fetch('https://api.example.com/get-api-key') // função HTTP (GET)
     console.info('manga')
   })
 console.log('mamao')
+

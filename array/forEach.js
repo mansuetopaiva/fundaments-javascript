@@ -38,6 +38,30 @@ const resultado = numeros.forEach(num => num * 2);
 
 console.log(resultado); // undefined
 
+// Multiplicar por 2.
+
+const numeros2 = [1, 2, 3, 4];
+const resultado2 = [];
+
+numeros2.forEach(num => {
+  resultado2.push(num * 2);
+});
+
+console.log(resultado2); // [2, 4, 6, 8]
+
+// Somar valores de um array:
+
+const numeros3 = [10, 20, 30];
+let soma = 0;
+
+numeros3.forEach(num => {
+  soma += num;
+});
+
+console.log(soma); // 60
+
+// 
+
 // .forEach() não retorna nada (undefined)
 
 const carrinho = [
